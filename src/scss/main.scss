@@ -1,0 +1,218 @@
+//========================section hero===================================
+.hero {
+   margin: 40px 0px 30px 0px;
+   &__body {
+      margin: 0px 0px 30px 0px;
+      @media (min-width: $mobileSmall) {
+         display: flex;
+         justify-content: space-around;
+      }
+      @media (min-width: $mobile) {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+   &__title {
+      margin: 0px 0px 23px 0px;
+      max-width: 155px;
+      font-size: 47px;
+      font-weight: 700;
+      line-height: 59px;
+      @media (min-width: $mobileSmall) {
+         margin: 0;
+      }
+   }
+   &__prof {
+      max-width: 155px;
+      align-self: center;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      @media (min-width: $mobileSmall) {
+         text-align: center;
+      }
+      @media (min-width: $mobile) {
+         align-self: end;
+         text-align: start;
+      }
+   }
+   &__lang {
+      display: none;
+      @media (min-width: $mobile) {
+         display: block;
+         align-self: end;
+         padding: 50px 0px 0px 0px;
+         font-size: 16px;
+         transform: rotate(-90deg);
+         text-transform: uppercase;
+         color: #828282;
+         span {
+            font-weight: 700;
+            color: #000;
+         }
+      }
+   }
+   &__img {
+      // background-image: url('../img/about.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      &_big {
+         display: none;
+         @media (min-width: $mobileSmall) {
+            display: block;
+            width: 100%;
+         }
+      }
+      &_mob{
+         display: block;
+         width: 100%;
+         margin: 0 auto;
+         @media (min-width: $mobileSmall) {
+         display: none;
+         }
+      }
+   }
+}
+//========================================================================
+
+//========================section about===================================
+.about {
+   background-color: #F6F6F6;
+   &__body {
+      padding: 80px 0px 76px 0px;
+      text-align: center;
+      @media (min-width: $mobileSmall) {
+         max-width: 485px;
+         margin: 0 auto;
+         padding: 120px 0px 107px 0px;
+      }
+   }
+   &__title {
+      margin: 0px 0px 17px 0px;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 42px;
+   }
+   &__text {
+      margin: 0px 0px 20px 0px;
+      font-size: 18px;
+      line-height: 22px;
+      &:nth-child(4) {
+         margin: 0px 0px 0px 0px;
+      }
+      @media (min-width: $mobileSmall) {
+         font-size: 18px;
+      }
+   }
+}
+//============================================================================
+
+//========================section skills===================================
+.skills {
+   padding: 83px 0px 98px 0px;
+   @media (min-width: $mobileSmall) {
+      padding: 91px 0px 110px 0px;
+   }
+   &__body {
+
+   }
+   &__title {
+      margin: 0px 0px 70px 0px;
+      text-align: center;
+      font-size: 34px;
+      font-weight: 700;
+   }
+   &__text {
+      margin: 0px 0px 84px 0px;
+      font-size: 18px;
+      text-align: center;
+   }
+   &__column {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 80px;
+      @media (min-width: $mobileSmall) {
+         display: grid;
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @media (min-width: $mobile) {
+         grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      }
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      transition: 0.5s ease;
+      &:hover {
+         transform: scale(1.2);
+      }
+      &-img {
+         margin: 0px 0px 24px 0px;
+         width: 90px;
+         height: 90px;
+      }
+      &-text {
+         max-width: 78px;
+         margin: 0 auto;
+         font-size: 14px;
+         color: #828282;
+      }
+      &-stars {
+         margin: 40px 0px 0px 0px;
+      }
+      &-starImg {
+         align-items: flex-end;
+         width: 20px;
+         height: 20px;
+      }
+   }
+}
+//==========================================================================
+
+//========================section portfolio===================================
+.portfolio {
+   padding: 81px 0px 96px 0px;
+   background-color: #F6F6F6;
+   @media (min-width: $mobileSmall) {
+      padding: 112px 0px 96px 0px;
+   }
+   &__title {
+      margin: 0px 0px 64px 0px;
+      text-align: center;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 42px;
+      @media (min-width: $mobileSmall) {
+         margin: 0px 0px 47px 0px;
+      }
+   
+   }
+   &__item {
+      margin: 0px 0px 77px 0px;
+      &:nth-child(4) {
+         margin: 0px 0px 0px 0px;
+      }
+      @media (min-width: $mobileSmall) {
+         margin: 0px 0px 99px 0px;
+      }
+   }
+   &__item-img {
+      margin: 0px 0px 35px 0px;
+      width: 100%;
+      @media (min-width: $mobileSmall) {
+         margin: 0px 0px 45px 0px;
+      }
+   }
+   &__item-text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 21px;
+      text-decoration: underline;
+   }
+}
+//==========================================================================
